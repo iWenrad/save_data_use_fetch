@@ -1,0 +1,194 @@
+/* ---- IMPORT FONTS ---- */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,regular,500,900);
+
+/* ---- MINIMAL NULLING STYLES ---- */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ---- MAIN STYLES ----*/
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	background: url('../public/forest.jpg') center / cover no-repeat;
+}
+
+.wrapper {
+	min-height: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+[class*='__container'] {
+	max-width: 1140px;
+	margin: 0px auto;
+	padding: 0 15px;
+	width: 100%;
+}
+
+.main {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+		// .main__box
+
+		&__box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+}
+.auth {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: 50px 20px;
+	border-radius: 20px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(7px);
+	max-width: 700px;
+	width: 100%;
+		// .auth__text
+
+		&__text {
+			margin: 0 auto;
+			padding: 0px 10px 20px 10px;
+			font-size: 30px;
+			color: #ffffff;
+		}
+}
+.box {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+		// .box__wrapper
+
+		&__wrapper {
+			margin-bottom: 30px;
+			text-align: center;
+		}
+
+		// .box__input
+
+		&__input {
+			padding: 10px;
+			background-color: #ffffff;
+			border-radius: 5px;
+			font-size: 16px;
+			max-width: 500px;
+			width: 100%;
+		}
+}
+
+/* ---- Button ---- */
+
+.button {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 10px;
+		// .btn__button
+
+		&__item {
+			padding: 10px 15px;
+			background-color: #7a31da;
+			border: none;
+			border-radius: 20px;
+			max-width: 200px;
+			width: 100%;
+			
+			color: #ffffff;
+			font-size: 16px;
+			
+			transition: .3s;
+
+			&:hover {
+				background-color: #5b19b1;
+				box-shadow: 0 0 5px #5b19b1;
+			}
+
+			// .btn__button_save
+
+			&_save {
+			}
+
+			// .btn__button_reset
+
+			&_reset {
+			}
+		}
+}
+
+/* ---- Modal window ----*/
+
+.modal {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: #2e2e2e7a;	
+	top: 0;
+	left: 0;
+	
+	// .modal__dialog
+
+	&__dialog {
+		min-height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 30px 10px;
+	}
+
+	// .modal__content
+
+	&__content {
+		position: relative;
+		background: #FFFFFF;
+		color: #000;
+		max-width: 800px;
+		padding: 50px;
+	}
+
+	// .modal__close
+
+	&__close {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		font-size: 20px;
+		text-decoration: none;
+		color: #000;
+		transition: .3s all;
+
+		&:hover {
+			color: #302f2f;
+		}
+	}
+
+	// .modal__message
+
+	&__message {
+		font-size: 25px;
+		font-weight: 500;
+	}
+}
+
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
+}

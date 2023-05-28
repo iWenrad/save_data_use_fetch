@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Save data to DB</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="main">
+        <div class="main__container">
+          <div class="main__box">
+            <div class="auth">
+              <div class="auth__text">Save data to DB</div>
+
+              <div class="box">
+                <form action="#">
+                  <div class="box__wrapper">
+                    <input
+                      required
+                      class="box__input"
+                      placeholder="Name"
+                      type="text"
+                      name="name"
+                    />
+                  </div>
+                  <div class="box__wrapper">
+                    <input
+                      required
+                      class="box__input"
+                      placeholder="Surname"
+                      type="text"
+                      name="surname"
+                    />
+                  </div>
+                  <div class="box__wrapper">
+                    <input
+                      required
+                      class="box__input"
+                      placeholder="Email"
+                      type="email"
+                      name="email"
+                    />
+                  </div>
+                  <div class="box__wrapper">
+                    <input
+                      required
+                      class="box__input"
+                      placeholder="Pass"
+                      type="password"
+                      name="pass"
+                    />
+                  </div>
+                  <div class="button">
+                    <button
+                      class="button__item button__item_save"
+                      id="savedata"
+                      type="submit"
+                    >
+                      Save
+                    </button>
+                    <button
+                      class="button__item button__item_reset"
+                      type="reset"
+                    >
+                      Reset
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal hide">
+      <div class="modal__dialog">
+        <div class="modal__content">
+          <a href="#" class="modal__close">&times;</a>
+          <div class="modal__message"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
